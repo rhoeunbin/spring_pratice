@@ -25,7 +25,7 @@ spring:
     activate:
       on-profile: dev
   datasource:
-    url: "jdbc:mysql://localhost/library" # 스프링이 연결할 데이터베이스의 경로
+    url: "jdbc:mysql://localhost/library?useSSL=false&allowPublicKeyRetrieval=true" # 스프링이 연결할 데이터베이스의 경로
     username: "root" # mysql의 계정 정보
     password: "Abcd1234!" # mysql의 비밀번호
     driver-class-name: com.mysql.cj.jdbc.Driver # 데이터베이스에 접근할 때 사용하는 프로그램
