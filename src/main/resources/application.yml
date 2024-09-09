@@ -34,6 +34,7 @@ spring:
       ddl-auto: none # 우리 프로젝트는 테이블과 객체가 잘 연결되었기 때문에 필요 X
     properties:
       hibernate:
+        globally_quoted_identifiers: true
         show_sql: true # JPA를 사용해 db에 Sql을 날릴 때 Sql을 보여줄지에 관한 것
         format_sql: true # sql을 보여줄 때 예쁘게 포맷할 것인지
         dialect: org.hibernate.dialect.MySQL8Dialect # 이 옵션으로 db를 특정하면 조금씩 다른 Sql을 수정
