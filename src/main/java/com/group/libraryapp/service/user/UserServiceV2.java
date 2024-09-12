@@ -20,13 +20,13 @@ public class UserServiceV2 {
     }
 
     // 유저 저장
-    @Transactional(readOnly = true)
+    @Transactional
     public void saveUser(UserCreateRequest request){
         userRepository.save(new User(request.getName(), request.getAge()));
     }
 
     // 유저 조회
-    @Transactional
+    @Transactional(readOnly = true)
     public List<UserResponse> getUsers(){
         return userRepository.findAll().stream()
                 //.map(user -> new UserResponse(user.getId(), user.getName(), user.getAge()))
